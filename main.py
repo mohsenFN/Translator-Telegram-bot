@@ -1,10 +1,9 @@
 from googletrans import Translator
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-start_text = open('start_text.txt', 'r', encoding='utf8').read()
 
 def start_func(update, context):  
-    update.message.reply_text("""سلام \nپیام انگلیسی یا فارسی خود را ارسال کنید.""")
+    update.message.reply_text("""سلام \nپیام انگلیسی یا فارسی خود را ارسال کنید.\n/about""")
     print('Start REQ from {}'.format(update.message.from_user.first_name))
     
 def trans_func(update, context):
@@ -20,8 +19,11 @@ def trans_func(update, context):
     else:
         transed = Translator().translate(user_text, dest='fa').text
         update.message.reply_text(transed)
+def about_func(update, context):
+	update.message.reply_text("coder @six_6_six\nchannel @freezed_cash\ngithub github.com/mohsenfn")
 
-updater = Updater("Bot's Token", use_context=True)
+updater = Updater("1022302291:AAGeLKKLbWueJEybGF1nzAaQpdegGNnxqdk", use_context=True)
+updater.dispatcher.add_handler(CommandHandler("about", about_func))
 updater.dispatcher.add_handler(CommandHandler("start", start_func))
 updater.dispatcher.add_handler(MessageHandler(Filters.text, trans_func))
 print("Running ...")

@@ -22,7 +22,7 @@ def trans_func(update, context):
 def about_func(update, context):
 	update.message.reply_text("coder @six_6_six\nchannel @freezed_cash\ngithub github.com/mohsenfn")
 
-updater = Updater("1022302291:AAGeLKKLbWueJEybGF1nzAaQpdegGNnxqdk", use_context=True)
+updater = Updater("token here", use_context=True)
 updater.dispatcher.add_handler(CommandHandler("about", about_func))
 updater.dispatcher.add_handler(CommandHandler("start", start_func))
 updater.dispatcher.add_handler(MessageHandler(Filters.text, trans_func))

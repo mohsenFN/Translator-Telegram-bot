@@ -17,6 +17,9 @@ def trans_func(update, context):
     elif lang == 'en':
         transed = Translator().translate(user_text, dest='fa').text
         update.message.reply_text(transed)
+    else:
+        transed = Translator().translate(user_text, dest='fa').text
+        update.message.reply_text(transed)
 
 updater = Updater("Bot's Token", use_context=True)
 updater.dispatcher.add_handler(CommandHandler("start", start_func))

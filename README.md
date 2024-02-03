@@ -1,16 +1,15 @@
-# Transfn-Bot
+# Telegram Translation Bot
 
-#### Telegram Trasnlator Bot !
-#### Telegram Bot written in python.
-Used Modules:
+This Telegram bot translates text messages from Persian (Farsi) to English and vice versa. It utilizes the Google Translate API for language detection and translation.
 
-* python-telegram-bot
-* googletrans 
+## Getting Started
 
+### Prerequisites
 
-Already runing at [Here](t.me/transfn_bot)
- 
+- Python 3.x
+- [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
+- [googletrans==4.0.0-rc1](https://github.com/ssut/py-googletrans)
 
+## 🛠️ NOTE !
 
-
-![BOT](https://img.talkandroid.com/uploads/2015/05/telegram_app_icon-450x450.png)
+**Note:** This repository is no longer actively maintained. Feel free to fork and continue the development if needed. Pull requests and contributions are welcome.

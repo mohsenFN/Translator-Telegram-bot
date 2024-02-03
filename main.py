@@ -22,7 +22,11 @@ def trans_func(update, context):
 def about_func(update, context):
 	update.message.reply_text("Coded with love for love ;) --> Number 1 is AWAKE !")
 
-updater = Updater("token here", use_context=True)
+'''
+You can get your own bot token from @botfather in telegram.
+replace your token with __TOKEN__
+'''
+updater = Updater("__TOKEN__", use_context=True)
 updater.dispatcher.add_handler(CommandHandler("about", about_func))
 updater.dispatcher.add_handler(CommandHandler("start", start_func))
 updater.dispatcher.add_handler(MessageHandler(Filters.text, trans_func))

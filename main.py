@@ -20,7 +20,7 @@ def trans_func(update, context):
         transed = Translator().translate(user_text, dest='fa').text
         update.message.reply_text(transed)
 def about_func(update, context):
-	update.message.reply_text("coder @six_6_six\nchannel @freezed_cash\ngithub github.com/mohsenfn")
+	update.message.reply_text("Coded with love for love ;) --> Number 1 is AWAKE !")
 
 updater = Updater("token here", use_context=True)
 updater.dispatcher.add_handler(CommandHandler("about", about_func))
